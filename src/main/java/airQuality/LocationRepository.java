@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class LocationRepository {
 
-    // załadowanie danych do bazy danych
+ 
     //load data into database
     public  static List<Location> addDataToDataBase (Properties properties, List<Location> locations){
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", properties);

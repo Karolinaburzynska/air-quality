@@ -9,7 +9,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        // wczytanie pliku
+     
 
         File fileWithData = new File("LocationCity.json");
         String jsonString = airQuality.File.fileLoading(fileWithData);
@@ -19,7 +19,7 @@ public class Main {
         System.out.println(array.length());
 
 
-        // pętla, która wczytuje dane z json do List<Location>
+       
         for (int i = 0; i < array.length() - 1; i++) {
 
             int id = array.getJSONObject(i).getInt("id");
@@ -36,7 +36,7 @@ public class Main {
         for (Location o : locationList) {
             System.out.println(o);
         }
-        // wywołanie metody, która doda dane do bazy danych
+       
         List<Location> locationListAddedToDatabase = LocationRepository.addDataToDataBase(ApplicationPropertiesProvider.getAirQualityProperties(), locationList);
 
     }
