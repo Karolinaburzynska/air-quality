@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LocationCity.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/ApplicationPropertiesProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/airQuality.properties" afterDir="false" />
+    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="commit 1 Add locationList to Database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Measurement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/MeasurementConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/MeasurementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,23 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/SDA/VI BLOK/airQuality"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/SDA/VI BLOK/airQuality&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\SDA\VI BLOK\airQuality\src\main\resources\META-INF" />
       <recent name="C:\SDA\VI BLOK\airQuality\src\main\resources" />
       <recent name="C:\SDA\VI BLOK\airQuality" />
     </key>
+    <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="airQuality.ParameterRepository" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="airQuality.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="airQuality.Main" />
       <module name="airQuality" />
       <extension name="coverage">
@@ -75,7 +80,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.airQuality.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -88,6 +93,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669562569828</updated>
     </task>
+    <task id="LOCAL-00001" summary="commit 1 Add locationList to Database">
+      <created>1669735320270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669735320270</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit 1 Add locationList to Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 1 Add locationList to Database" />
   </component>
 </project>

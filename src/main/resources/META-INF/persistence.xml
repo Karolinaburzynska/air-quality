@@ -2,6 +2,9 @@
 
     <persistence-unit name="airQuality">
         <class>airQuality.Location</class>
+        <class>airQuality.Parameters</class>
+        <class>airQuality.Measurement</class>
+        <class>airQuality.AirQualityIndex</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.show_sql" value="true"/>
