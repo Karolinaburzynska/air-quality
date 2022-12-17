@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="commit 1 Add locationList to Database">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexRepository.java" afterDir="false" />
+    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="commit 2 connection with database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Calculate.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Measurement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/MeasurementConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/MeasurementRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationDeleteData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/RequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669735320270</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit 2 connection with database">
+      <created>1670615173935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670615173935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,7 +110,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -116,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit 1 Add locationList to Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 1 Add locationList to Database" />
+    <MESSAGE value="commit 2 connection with database" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 2 connection with database" />
   </component>
 </project>

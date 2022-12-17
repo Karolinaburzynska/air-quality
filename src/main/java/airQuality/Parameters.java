@@ -34,6 +34,8 @@ public class Parameters {
         this.idParameter = idParameter;
     }
 
+    public Parameters() {}
+
     public int getId() {
         return id;
     }

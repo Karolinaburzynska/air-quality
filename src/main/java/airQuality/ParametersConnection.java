@@ -48,35 +48,30 @@ public class ParametersConnection {
 
 
     // wczytanie danych z powyższego API do bazy danych
-    public static List<Parameters> parametersList(int userChoice) {
+    public static List<Parameters> parametersList(List<Integer> userChoice) {
 
         List<Parameters> parameters = new ArrayList<>();
 
         ParametersConnection conn = new ParametersConnection();
+        for (int i = 0; i < userChoice.size(); i++) {
+            JSONArray array = new JSONArray(getParameters(userChoice.get(i)));
 
-        JSONArray array = new JSONArray(getParameters(userChoice));
+            for (int j = 0; j < array.length(); j++) {
 
+                JSONObject jsonobject = (JSONObject) array.get(j);
+                String parameterName = jsonobject.getJSONObject("param").getString("paramName");
+                String parameterFormula = jsonobject.getJSONObject("param").getString("paramFormula");
+                String parameterCode = jsonobject.getJSONObject("param").getString("paramCode");
+                int idParameter = jsonobject.getJSONObject("param").getInt("idParam");
+                int id = jsonobject.getInt("id");
+                int stationId = jsonobject.getInt("stationId");
 
-        System.out.println(array);
+                parameters.add(new Parameters(parameterFormula, parameterCode, idParameter, parameterName, id, stationId));
 
-
-        for (int i = 0; i < array.length(); i++) {
-
-            JSONObject jsonobject = (JSONObject) array.get(i);
-            String parameterName = jsonobject.getJSONObject("param").getString("paramName");
-            String parameterFormula = jsonobject.getJSONObject("param").getString("paramFormula");
-            String parameterCode = jsonobject.getJSONObject("param").getString("paramCode");
-            int idParameter = jsonobject.getJSONObject("param").getInt("idParam");
-            int id = jsonobject.getInt("id");
-            int stationId = jsonobject.getInt("stationId");
-
-            parameters.add(new Parameters(parameterFormula, parameterCode, idParameter, parameterName, id, stationId));
-
-
+            }
         }
         System.out.println(parameters);
         return parameters;
+
     }
-
-
 }

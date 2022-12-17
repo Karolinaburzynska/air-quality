@@ -5,12 +5,11 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 import java.util.List;
-import java.util.Properties;
 
 public class ParametersRepository {
 
-    public  static List<Parameters> addDataToDataBase (Properties properties, List<Parameters> parameters){
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", properties);
+    public static void addDataToDataBase(List<Parameters> parameters) {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", ApplicationPropertiesProvider.getAirQualityProperties());
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         try {
@@ -26,10 +25,28 @@ public class ParametersRepository {
             entityManagerFactory.close();
         }
 
+        System.out.println(parameters);
 
-        return parameters;
     }
 
 
+    public static void deleteDataParametersFromDataBase() {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", ApplicationPropertiesProvider.getAirQualityProperties());
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
 
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery(" DELETE FROM Parameters").executeUpdate();
+
+            entityManager.getTransaction().commit();
+        } finally {
+            entityManagerFactory.close();
+        }
+
+    }
 }
+
+
+
+
+

@@ -2,6 +2,7 @@ package airQuality;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -26,13 +27,12 @@ public class LocationRepository {
             entityManagerFactory.close();
         }
 
-
         return locations;
     }
 
-    public static int getUserChoice (String cityName, Properties properties){
+    public static List<Integer> findCityId (String cityName){
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", properties);
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", ApplicationPropertiesProvider.getAirQualityProperties());
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 
@@ -46,10 +46,7 @@ public class LocationRepository {
 
             result = query.getResultList();
 
-
-            int xx = result.get(0);
-
-            return xx;
+            return result;
 
         } finally {
             entityManagerFactory.close();
@@ -57,4 +54,22 @@ public class LocationRepository {
     }
 
 
+    public static List<String> findParameters(){
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("airQuality", ApplicationPropertiesProvider.getAirQualityProperties());
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        List<String> result = new ArrayList<>();
+
+        try {
+
+                Query query = entityManager.createQuery("SELECT parameterName FROM Parameters");
+
+                        result = query.getResultList();
+
+        } finally {
+            entityManagerFactory.close();
+        }
+        return result;
+    }
 }
