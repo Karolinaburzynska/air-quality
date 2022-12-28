@@ -12,14 +12,14 @@ public class Main {
         boolean start = true;
 
         //loading location data to database
-        List<Location> locationListAddedToDatabase = LocationRepository.addDataToDataBase(ApplicationPropertiesProvider.getAirQualityProperties(), locationLoadData.loadData());
+       List<Location> locationListAddedToDatabase = LocationRepository.addDataToDataBase(ApplicationPropertiesProvider.getAirQualityProperties(), locationLoadData.loadData());
 
         while (start) {
 
             GUI.showMenu();
             int choice = GUI.getUserChoice();
             handler.userChoice(choice);
-            if(choice == 10){
+            if(choice == 3){
                 locationDeleteData.deleteDataLocationsFromDataBase();
                 start = false;
             }

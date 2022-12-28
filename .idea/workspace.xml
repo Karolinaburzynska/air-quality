@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="commit 2 connection with database">
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/Calculate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationDeleteData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/airQuality/RequestHandler.java" afterDir="false" />
+    <list default="true" id="d40c7428-30e5-48d0-8980-00a1a3cdc9db" name="Changes" comment="commit add first method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationLoadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/AirQualityIndexRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/LocationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/Parameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/ParametersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airQuality/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/airQuality/RequestHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670615173935</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit add first method">
+      <created>1671274557053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671274557053</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +135,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit 1 Add locationList to Database" />
     <MESSAGE value="commit 2 connection with database" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 2 connection with database" />
+    <MESSAGE value="commit add first method" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit add first method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

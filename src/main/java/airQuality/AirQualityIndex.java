@@ -23,6 +23,8 @@ public class AirQualityIndex {
         this.o3IndexLevelName = o3IndexLevelName;
     }
 
+    public AirQualityIndex() {
+    }
 
     @Override
     public String toString() {

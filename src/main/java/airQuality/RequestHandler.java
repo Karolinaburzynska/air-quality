@@ -1,5 +1,6 @@
 package airQuality;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,34 +10,32 @@ public class RequestHandler {
 
         Scanner scanner = new Scanner(System.in);
 
-        if (choice == 1) {
+            if (choice == 1) {
 
-            System.out.println("Proszę podać miasto:");
-            String city = scanner.nextLine();
+                System.out.println("Proszę podać miasto:");
+                String city = scanner.nextLine();
 
-            List<Parameters> xxx = ParametersConnection.parametersList(LocationRepository.findCityId(city));
-            ParametersRepository.addDataToDataBase(xxx);
-            System.out.println("Związki chemiczne znajdujące się w powietrzu dla wybranego miasta" + LocationRepository.findParameters());
-            ParametersRepository.deleteDataParametersFromDataBase();
+                List<Parameters> xxx = ParametersConnection.parametersList(LocationRepository.findCityId(city));
+                ParametersRepository.addDataToDataBase(xxx);
+                System.out.println("Związki chemiczne znajdujące się w powietrzu dla wybranego miasta" + LocationRepository.findParameters());
+                ParametersRepository.deleteDataParametersFromDataBase();
 
-        } else if (choice == 2) {
+            } else if (choice == 2) {
 
-        } else if (choice == 3) {
+                System.out.println("Proszę podać miasto:");
+                String city = scanner.nextLine();
 
-        } else if (choice == 4) {
+                List<Integer> idCitiesList = LocationRepository.findCityId(city);
+                List<AirQualityIndex> cityIndex = AirQualityIndexConnection.airQualityIndex(idCitiesList.get(0));
+                AirQualityIndexRepository.addMeasurementsToDataBase(cityIndex);
 
-        } else if (choice == 5) {
+                System.out.println("Jakość powietrza dla miasta " + city + " to: " + AirQualityIndexRepository.findParameters());
+                AirQualityIndexRepository.deleteDataParametersFromDataBase();
 
-        } else if (choice == 6) {
 
-        } else if (choice == 7) {
+            } else if (choice > 3 || choice < 1) {
+                System.out.println("Nieprawidłowy wybór, spróbuj ponownie");
 
-        } else if (choice == 8) {
-
-        } else if (choice == 9) {
-
-        } else if (choice > 10 || choice < 1) {
-            System.out.println("Nieprawidłowy wybór, spróbuj ponownie");
-        }
+            }
     }
 }

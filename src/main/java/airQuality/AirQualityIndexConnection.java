@@ -47,8 +47,8 @@ public class AirQualityIndexConnection {
     }
 
 
-    // wczytanie danych z powyższego// API do bazy danych
-    public static List<AirQualityIndex> airQualityIndices(int userChoice) {
+    // wczytanie danych z powyższego do zmiennych
+    public static List<AirQualityIndex> airQualityIndex(int userChoice) {
 
         List<AirQualityIndex> airQualityList = new ArrayList<>();
 
@@ -79,7 +79,13 @@ public class AirQualityIndexConnection {
             pm25IndexLevelName = null;
         }
 
-        String o3IndexLevelName = obj.getJSONObject("o3IndexLevel").getString("indexLevelName");
+        String o3IndexLevelName;
+        if (obj.has("o3IndexLevel")) {
+            o3IndexLevelName = obj.getJSONObject("o3IndexLevel").getString("indexLevelName");;
+        }else {
+            o3IndexLevelName = null;
+        }
+
 
         airQualityList.add(new AirQualityIndex(id, stIndexLevelName,so2IndexLevelName, no2IndexLevelName, pm10IndexLevelName, pm25IndexLevelName, o3IndexLevelName));
 
